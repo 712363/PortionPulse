@@ -57,3 +57,38 @@ body {
     color: rgb(17, 153, 216);
 }
 
+/*Hero section*/
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: #000;
+    height: 60vh;
+    min-height: 420px;
+    position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 900px;
+}
+
+.hero-title {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hero-sub{
+    margin-bottom: 22px;
+    color: #BFBFBF;
+    font-size: 18px;
+}
+
