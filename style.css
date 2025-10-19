@@ -43,7 +43,7 @@ body {
 .brand-name{
     font-weight: 600;
     color: white;
-    margin-left: 0
+    margin-left: -30px
 }
 
 .nav-links a{
@@ -54,7 +54,7 @@ body {
 }
 
 .nav-links a:hover{
-    color: rgb(17, 153, 216);
+    color: #66C2FF;
 }
 
 /*Hero section*/
@@ -92,3 +92,58 @@ body {
     font-size: 18px;
 }
 
+/*Button for hero section*/
+.btn{
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn .primary {
+  background: linear-gradient(90deg, #2D9CFF, #66C2FF);
+  color: white;
+}
+
+.btn.ghost {
+  position: relative;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow: hidden;
+  background: black;
+  color: #BFBFBF;
+  transition: color 0.3s ease;
+  margin-bottom: -16px;
+}
+ 
+/*sick button animation using pseudo*/
+.btn.ghost::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #2D9CFF, #66C2FF); 
+  z-index: 0;
+  transition: left 0.3s ease;
+}
+
+.btn.ghost:hover::before {
+  left: 0;
+}
+
+.btn.ghost span {
+  position: relative;
+  z-index: 1;
+  display: inline-block; 
+}
+
+.btn.ghost:hover {
+  color: white; 
+}
