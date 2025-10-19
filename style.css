@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color:black;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/*navbar*/
+
+.navbar{
+   position: sticky;
+   top: 0;
+   border-bottom: 1px solid rgba(255,255,255,0.05);
+   background-color: #121217;
+}
+
+.nav-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  14px 24px;
+    max-width: 1200px;
+    margin: 0 AUTO;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 0;
+} 
+
+.brand-logo{
+    width: 150px;
+    margin-right: 0
+}
+
+.brand-name{
+    font-weight: 600;
+    color: white;
+    margin-left: 0
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #BFBFBF;
+    margin-left: 18px;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-links a:hover{
+    color: rgb(17, 153, 216);
+}
+
