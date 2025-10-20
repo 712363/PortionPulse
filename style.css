@@ -47,6 +47,11 @@ body {
     margin-left: -30px
 }
 
+.nav-links{
+  display: flex;
+  gap: 15px;
+}
+
 .nav-links a{
     text-decoration: none;
     color: #BFBFBF;
@@ -196,3 +201,104 @@ main{
   filter: invert(1) brightness(2);
 }
 
+/*light-mode* just for button*/
+#toggleContainer {
+  width: 50px;
+  height: 25px;
+  background: #333;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+#toggleCircle{
+  width: 21px;
+  height:  21px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.4s ease, background 0.4s ease;
+}
+
+.light-mode #toggleContainer {
+  background: #ccc;
+}
+
+.light-mode #toggleCircle {
+  left: 27px;
+  background: #fff;
+}
+
+/*light-mode* for every element*/
+.light-mode {
+  background-color: #F7F9FC;
+  color: #000;
+}
+
+.light-mode .navbar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.light-mode .brand-name {
+  color: #000;
+}
+
+.light-mode .nav-links a {
+  color: #333;
+}
+
+.light-mode .nav-links a:hover {
+  color: #1976D2;
+}
+
+.light-mode .hero {
+  background: #E9F1FF;
+  color: #000;
+}
+
+.light-mode .hero-sub {
+  color: #444;
+}
+
+.light-mode .hero-overlay {
+  background: linear-gradient(180deg, rgba(255,255,255,0.4), rgba(255,255,255,0.8));
+}
+
+.light-mode .btn.ghost {
+  background: #E6E6E6;
+  color: #333;
+}
+
+.light-mode .btn.ghost::before {
+  background: linear-gradient(90deg, #2D9CFF, #66C2FF);
+}
+
+.light-mode .btn.ghost:hover {
+  color: white;
+}
+
+.light-mode .card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.light-mode .card h2 {
+  color: #000;
+}
+
+.light-mode .card p {
+  color: #444;
+}
+
+.light-mode .site-footer {
+  background: #FFFFFF;
+  color: #444;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.light-mode .invert-image {
+  filter: invert(0) brightness(1);
+}
