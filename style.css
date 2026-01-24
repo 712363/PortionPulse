@@ -302,3 +302,81 @@ main{
 .light-mode .invert-image {
   filter: invert(0) brightness(1);
 }
+
+.light-mode .about-hero h1{
+   color: #000;
+}
+
+/*about.html page*/
+
+/* ABOUT PAGE STYLING */
+
+.about-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  color: white;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  color: #BFBFBF;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.about-card {
+  background: #16161a;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.about-card h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  color: #BFBFBF;
+}
+
+.about-creator h2 {
+  margin-bottom: 10px;
+}
+
+.about-creator p {
+  color: #BFBFBF;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Light mode support */
+.light-mode .about-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.light-mode .about-card h2 {
+  color: #000;
+}
+
+.light-mode .about-card p,
+.light-mode .about-hero p,
+.light-mode .about-creator p {
+  color: #444;
+}
+
+ 
