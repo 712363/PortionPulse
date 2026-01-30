@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner | Portion Pulse</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <img src="images/portionpulse.png" class="brand-logo">
+      <span class="brand-name">Portion Pulse</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="meal-planner.html" class="active">Meal Planner</a>
+      <a href="healthytips.html">Healthy Tips</a>
+      <a href="checklist.html">Checklist</a>
+      <a href="about.html">About</a>
+
+      <div id="toggleContainer">
+        <div id="toggleCircle"></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="planner-container">
+
+  <section class="planner-header">
+    <h1>Weekly Meal Planner</h1>
+    <p>Plan balanced meals, control portions, and stay consistent throughout the week.</p>
+  </section>
+
+  <section class="meal-grid">
+
+    <!-- DAY CARD -->
+    <div class="day-card">
+      <h2>Monday</h2>
+      <label>Breakfast</label>
+      <input type="text" placeholder="e.g. Oats & fruit">
+
+      <label>Lunch</label>
+      <input type="text" placeholder="e.g. Chicken wrap">
+
+      <label>Dinner</label>
+      <input type="text" placeholder="e.g. Rice & veg">
+
+      <label>Snacks</label>
+      <input type="text" placeholder="e.g. Yogurt, nuts">
+    </div>
+
+    <!-- COPY THIS CARD FOR EACH DAY -->
+    <div class="day-card">
+      <h2>Tuesday</h2>
+      <label>Breakfast</label>
+      <input type="text">
+
+      <label>Lunch</label>
+      <input type="text">
+
+      <label>Dinner</label>
+      <input type="text">
+
+      <label>Snacks</label>
+      <input type="text">
+    </div>
+
+    <div class="day-card">
+      <h2>Wednesday</h2>
+      <label>Breakfast</label>
+      <input type="text">
+
+      <label>Lunch</label>
+      <input type="text">
+
+      <label>Dinner</label>
+      <input type="text">
+
+      <label>Snacks</label>
+      <input type="text">
+    </div>
+
+    <div class="day-card">
+      <h2>Thursday</h2>
+      <label>Breakfast</label>
+      <input type="text">
+
+      <label>Lunch</label>
+      <input type="text">
+
+      <label>Dinner</label>
+      <input type="text">
+
+      <label>Snacks</label>
+      <input type="text">
+    </div>
+
+    <div class="day-card">
+      <h2>Friday</h2>
+      <label>Breakfast</label>
+      <input type="text">
+
+      <label>Lunch</label>
+      <input type="text">
+
+      <label>Dinner</label>
+      <input type="text">
+
+      <label>Snacks</label>
+      <input type="text">
+    </div>
+
+    <div class="day-card">
+      <h2>Saturday</h2>
+      <label>Breakfast</label>
+      <input type="text">
+
+      <label>Lunch</label>
+      <input type="text">
+
+      <label>Dinner</label>
+      <input type="text">
+
+      <label>Snacks</label>
+      <input type="text">
+    </div>
+
+    <div class="day-card">
+      <h2>Sunday</h2>
+      <label>Breakfast</label>
+      <input type="text">
+
+      <label>Lunch</label>
+      <input type="text">
+
+      <label>Dinner</label>
+      <input type="text">
+
+      <label>Snacks</label>
+      <input type="text">
+    </div>
+
+  </section>
+
+  <button class="save-meals-btn">Save Meal Plan</button>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Portion Pulse: Made by Yusuf</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
