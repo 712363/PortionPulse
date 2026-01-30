@@ -66,3 +66,25 @@ if (notes) {
     localStorage.setItem("dailyNotes", notes.value);
   });
 }
+
+const mealInputs = document.querySelectorAll('.meal-day input');
+    const clearBtn = document.getElementById('clearPlanner');
+
+    // Load saved meals
+    mealInputs.forEach(input => {
+      const key = `${input.dataset.day}-${input.dataset.meal}`;
+      input.value = localStorage.getItem(key) || "";
+
+      input.addEventListener("input", () => {
+        localStorage.setItem(key, input.value);
+      });
+    });
+
+    // Clear planner
+    clearBtn.addEventListener("click", () => {
+      mealInputs.forEach(input => {
+        const key = `${input.dataset.day}-${input.dataset.meal}`;
+        localStorage.removeItem(key);
+        input.value = "";
+      });
+    });
