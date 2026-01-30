@@ -53,3 +53,16 @@ resetBtn.addEventListener('click', () => {
 
 // INITIAL update 
 updateProgress();
+
+// NOTES / REFLECTION SAVING
+const notes = document.getElementById("dailyNotes");
+
+// Load saved notes
+if (notes) {
+  notes.value = localStorage.getItem("dailyNotes") || "";
+
+  // Save notes while typing
+  notes.addEventListener("input", () => {
+    localStorage.setItem("dailyNotes", notes.value);
+  });
+}
