@@ -379,4 +379,92 @@ main{
   color: #444;
 }
 
- 
+ /* CHECKLIST PAGE */
+
+.checklist-page {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.progress-box,
+.checklist-box,
+.notes-box {
+  background: #16161a;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.progress-box h2,
+.checklist-box h2,
+.notes-box h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #2a2a2f;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2D9CFF, #66C2FF);
+  transition: width 0.3s ease;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #BFBFBF;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.check-item input {
+  transform: scale(1.2);
+}
+
+.notes-box textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+  background: #0D0D0D;
+  color: #E6E6E6;
+  resize: none;
+}
+
+/* Light mode */
+.light-mode .progress-box,
+.light-mode .checklist-box,
+.light-mode .notes-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.light-mode .progress-box h2,
+.light-mode .checklist-box h2,
+.light-mode .notes-box h2 {
+  color: #000;
+}
+
+.light-mode .check-item {
+  color: #444;
+}
+
+.light-mode .notes-box textarea {
+  background: #F1F1F1;
+  color: #000;
+}
