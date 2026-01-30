@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Checklist | Portion Pulse</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="images/portionpulse.png" alt="Portion Pulse logo" class="brand-logo">
+        <span class="brand-name">Portion Pulse</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="meal-planner.html">Meal Planner</a>
+        <a href="tips.html">Healthy Tips</a>
+        <a href="checklist.html">Checklist</a>
+        <a href="about.html">About</a>
+
+        <div id="toggleContainer">
+          <div id="toggleCircle"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title">Daily Health Checklist</h1>
+      <p class="hero-sub">
+        Small habits done daily lead to big long-term results.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="checklist-page">
+
+    <!-- PROGRESS -->
+    <section class="progress-box">
+      <h2>Daily Progress</h2>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+      <p id="progressText">0 of 8 tasks completed</p>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section class="checklist-box">
+      <h2>Today's Tasks</h2>
+
+      <label class="check-item">
+        <input type="checkbox"> Drink enough water
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox"> Eat breakfast
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox"> Eat fruit or vegetables
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox"> Avoid sugary snacks
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox"> Get some physical activity
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox"> Plan tomorrow’s meals
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox"> Get enough sleep
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox"> Stay consistent
+      </label>
+
+      <button id="resetBtn" class="btn ghost"><span>Reset Checklist</span></button>
+    </section>
+
+    <!-- NOTES -->
+    <section class="notes-box">
+      <h2>Notes / Reflection</h2>
+      <textarea placeholder="Write how today went, what you did well, or what you want to improve tomorrow..."></textarea>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Portion Pulse: Made by Yusuf</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
