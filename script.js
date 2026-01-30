@@ -1,26 +1,55 @@
 toggleContainer.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
+
+  // save theme
+  if (document.body.classList.contains("light-mode")) {
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
 });
 
- const checkboxes = document.querySelectorAll('.check-item input');
-    const progressFill = document.getElementById('progressFill');
-    const progressText = document.getElementById('progressText');
-    const resetBtn = document.getElementById('resetBtn');
+// load saved theme
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-mode");
+}
 
-    function updateProgress() {
-      const total = checkboxes.length;
-      const checked = document.querySelectorAll('.check-item input:checked').length;
-      const percentage = (checked / total) * 100;
+const checkboxes = document.querySelectorAll('.check-item input');
+const progressFill = document.getElementById('progressFill');
+const progressText = document.getElementById('progressText');
+const resetBtn = document.getElementById('resetBtn');
 
-      progressFill.style.width = percentage + '%';
-      progressText.textContent = `${checked} of ${total} tasks completed`;
-    }
+// LOAD saved checkbox states
+checkboxes.forEach((cb, index) => {
+  const saved = localStorage.getItem(`check-${index}`);
+  if (saved === "true") cb.checked = true;
+});
 
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', updateProgress);
-    });
+function updateProgress() {
+  const total = checkboxes.length;
+  const checked = document.querySelectorAll('.check-item input:checked').length;
+  const percentage = (checked / total) * 100;
 
-    resetBtn.addEventListener('click', () => {
-      checkboxes.forEach(cb => cb.checked = false);
-      updateProgress();
-    });
+  progressFill.style.width = percentage + '%';
+  progressText.textContent = `${checked} of ${total} tasks completed`;
+
+  // SAVE checkbox states
+  checkboxes.forEach((cb, index) => {
+    localStorage.setItem(`check-${index}`, cb.checked);
+  });
+}
+
+checkboxes.forEach(cb => {
+  cb.addEventListener('change', updateProgress);
+});
+
+resetBtn.addEventListener('click', () => {
+  checkboxes.forEach((cb, index) => {
+    cb.checked = false;
+    localStorage.removeItem(`check-${index}`);
+  });
+  updateProgress();
+});
+
+// INITIAL update 
+updateProgress();
