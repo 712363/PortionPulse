@@ -88,3 +88,14 @@ const mealInputs = document.querySelectorAll('.meal-day input');
         input.value = "";
       });
     });
+
+    const saveBtn = document.querySelector('.save-meals-btn');
+
+    saveBtn.addEventListener('click', () => {
+    mealInputs.forEach(input => {
+    const key = `${input.dataset.day}-${input.dataset.meal}`;
+    localStorage.setItem(key, input.value);
+  });
+
+  alert("Meal plan saved!");
+});
